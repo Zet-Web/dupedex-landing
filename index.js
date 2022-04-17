@@ -1,6 +1,6 @@
 const authCheckUrl = 'https://rest.clicksend.com/v3/account'
-const username = ''
-const apiKey = ''
+const username = 'raycai@hotmail.co.nz'
+const apiKey = '9D54BDB7-A845-6768-CE45-24D20616F883'
 const basecode = btoa(`${username}:${apiKey}`)
 
 const modal = document.querySelector(".modal")

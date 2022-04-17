@@ -171,7 +171,7 @@
 .library-section__background_image {
     width: 64%;
     min-width: 960px;
-    height: 54%;
+    height: 65%;
     inset: auto;
     left: 50%;
     transform: translate(-50%, 260px);
@@ -185,7 +185,7 @@
 /* READY SECTION */
 
 .ready-section {
-    height: 150px;
+    /*height: 150px;*/
     min-height: 150px;
     margin-bottom: 100px;
     padding: 0;
@@ -202,8 +202,9 @@
 .ready-section__content {
     align-items: center;
     width: 100%;
-    height: 150px;
+    /*height: 150px;*/
     padding: 0;
+    margin-top: 170px;
 }
 
 .ready-section__heading {

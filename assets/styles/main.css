@@ -1,0 +1,142 @@
+/* .main {
+} */
+
+/* MAIN SECTION */
+
+.main {
+    padding-top: var(--header-height);
+    background-color: var(--color-white);
+    min-height: 100vh;
+
+}
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 0 0 100%;
+    height: calc(100vh - var(--header-height));
+    padding: 0 var(--container-padding);
+
+}
+.main__content {
+    position: relative;
+    width: 48%;
+}
+
+.main__heading {
+    margin-bottom: 60px;
+    white-space: nowrap;
+}
+.main__text {
+    margin-bottom: 35px;
+}
+
+.main__text_error {
+    color: red;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: calc(0.6 * var(--text-font-size));
+}
+
+.main__form {
+    display: flex;
+    align-items: center;
+
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.main__label {
+    margin-right: 10px;
+}
+
+.main__background_stripe {
+    position: absolute;
+
+    width: 200vw;
+    height: 400px;
+    inset: 0;
+    transform: translateX(-50%);
+
+    background-color: var(--color-turquoise);
+}
+.main__background_image {
+    position: absolute;
+
+    width: calc(100% - 1 * var(--container-padding));
+    height: 80%;
+    top: 50%;
+    left: 0;
+    transform: translate(-105%, -40%);
+
+    background-image: url("../img/hero-bgimage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 1440px) {
+    .main__heading {
+        margin-bottom: 40px;
+    }
+
+    .main__background_stripe {
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main__container {
+        align-items: center;
+    }
+
+    .main__content {
+        width: 100%;
+        align-items: center;
+    }
+
+    .main__background_stripe {
+        height: 460px;
+    }
+
+    .main__background_image {
+        position: static;
+        min-height: 35vw;
+        margin-bottom: 30px;
+        width: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__text {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 86%;
+    }
+    
+    .main__background_image {
+        min-height: 270px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main__content {
+        padding-top: 20px;
+    }
+
+    .main__heading {
+        white-space: normal;
+    }
+
+    .main__text {
+        max-width: 310px;
+    }
+
+    .main__background_stripe {
+        height: 360px;
+    }
+}
+

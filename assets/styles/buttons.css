@@ -1,6 +1,7 @@
 .btn {
     --btn-font-size: 16px;
-    --btn-gap-size: 10px;
+    --btn-ver-gap-size: 10px;
+    --btn-hor-gap-size: 35px;
 
     background-color: transparent;
     border: none;
@@ -29,17 +30,17 @@
 }
 
 .btn_small {
-    padding: calc(0.5 * var(--btn-gap-size));
-    font-size: calc(0.5 * var(--btn-font-size));
+    padding: calc(0.7 * var(--btn-ver-gap-size)) calc(0.7 * var(--btn-hor-gap-size));
+    font-size: calc(0.7 * var(--btn-font-size));
 }
 
 .btn_medium {
-    padding: var(--btn-gap-size);
-    font-size: var(--btn-font-size);
+    padding: calc(1 * var(--btn-ver-gap-size)) calc(1 * var(--btn-hor-gap-size));
+    font-size: calc(1 * var(--btn-font-size));
 }
 
 .btn_large {
-    padding: calc(0.9 * var(--btn-gap-size)) calc(3 * var(--btn-gap-size));
+    padding: calc(1.4 * var(--btn-ver-gap-size)) calc(1.4 * var(--btn-hor-gap-size));
     font-size: calc(1.1 * var(--btn-font-size));
 }
 
@@ -72,38 +73,41 @@
 
 .btn_filled {
     color: var(--color-txt-white);
-    border: 1px solid var(--color-grey);
-    background-color: var(--color-button-grey);
+    background-color: var(--color-peach);
 }
-.btn_filled:focus-visible {
-    background-color: var(--color-button-grey-dark);
+.btn_filled:focus {
+    background-color: var(--color-peach-dark);
 }
 .btn_filled:hover,
 .btn_filled:active {
     color: var(--color-white);
-    border-color: var(--color-grey-dark);
-    background-color: var(--color-button-grey-darker);
-}
-.btn_filled-light {
-    color: var(--color-button-grey);
-    border: 1px solid var(--color-grey);
-    background-color: var(--color-white);
-    align-self: center;
-    margin-top: 30px;
-}
-.btn_filled-light:focus-visible {
-    background-color: var(--color-beige);
-}
-.btn_filled-light:hover,
-.btn_filled-light:active {
-    color: var(--color-button-grey-darker);
-    border-color: var(--color-grey-dark);
-    background-color: var(--color-beige-dark);
+    background-color: var(--color-peach-darker);
 }
 
-@media screen and (max-width: 1024px) {
+.btn_darkMode:focus-visible {
+    transform: scale(1.02);
+}
+.btn_darkMode:hover,
+.btn_darkMode:active {
+    transform: scale(1.05);
+}
+
+.btn_darkMode:hover > svg > ellipse,
+.btn_darkMode:focus-visible > svg > ellipse,
+.btn_darkMode:active > svg > ellipse {
+    fill: #383a4d;
+}
+
+.btn_darkMode:hover > svg > path,
+.btn_darkMode:focus-visible > svg > path,
+.btn_darkMode:active > svg > path {
+    fill: #fff9f7;
+}
+
+@media screen and (max-width: 576px) {
     .btn {
-        --btn-font-size: 14px;
-        --btn-gap-size: 7px;
+        --btn-font-size: 12px;
+        --btn-ver-gap-size: 6px;
+        --btn-hor-gap-size: 8px;
     }
 }

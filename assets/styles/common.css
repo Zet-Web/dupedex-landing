@@ -1,24 +1,14 @@
-.section {
-    /*height: 100vh;*/
-    /*min-height: 1024px;*/
-    padding-top: var(--header-height);
-}
-
 .container {
     position: relative;
-
     width: 100vw;
     max-width: 1920px;
-
     margin: 0 auto;
-    padding: 0 var(--container-padding);
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: start;
-    /*height: calc(1024px - var(--header-height));*/
     padding-top: 80px;
     z-index: 1;
 }
@@ -39,10 +29,6 @@
     font-size: var(--text-font-size);
 }
 
-.background {
-    position: absolute;
-}
-
 .list {
     margin: 0;
     padding: 0;
@@ -50,10 +36,4 @@
 }
 
 .item {
-}
-
-@media screen and (max-width: 1280px) {
-    .content {
-        padding-top: 130px;
-    }
 }

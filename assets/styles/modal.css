@@ -18,7 +18,7 @@
     width: 400px;
     border-radius: 16px;
 
-    padding: 22px 30px 25px;
+    padding: 20px;
     background-color: var(--color-white);
     transform: translate(-50%, -50%);
 }
@@ -73,4 +73,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .dialog {
+        max-width: 360px;
+        width: 80%;
+        padding: 20px 10px;
+    }
+    .dialog__caption {
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .dialog__text {
+        margin-bottom: 15px;
+        width: 80%;
+        font-size: 12px;
+        line-height: 14px;
+    }
 }

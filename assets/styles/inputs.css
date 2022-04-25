@@ -1,7 +1,9 @@
 .input {
     --input-font-size: 16px;
     --input-ver-gap-size: 10px;
-    --input-hor-gap-size: 35px;
+    --input-hor-gap-size: 25px;
+
+    width: 100%;
 
     background-color: transparent;
     border: none;
@@ -18,26 +20,26 @@
     transition-duration: 0.2s ;
     transition-timing-function: ease;
 }
+.input::placeholder {
+    font-style: italic;
+}
 .input:focus::placeholder {
     opacity: 0;
 }
 
 .input_small {
-    padding: calc(0.7 * var(--input-ver-gap-size)) calc(0.7 * var(--input-hor-gap-size));
-    font-size: calc(0.7 * var(--input-font-size));
-    min-width: 150px;
+    padding: calc(0.6 * var(--input-ver-gap-size)) calc(0.6 * var(--input-hor-gap-size));
+    font-size: calc(0.8 * var(--input-font-size));
 }
 
 .input_medium {
-    padding: calc(1 * var(--input-ver-gap-size)) calc(1 * var(--input-hor-gap-size));
-    font-size: calc(1 * var(--input-font-size));
-    min-width: 300px;
+    padding: calc(0.9 * var(--input-ver-gap-size)) calc(0.9 * var(--input-hor-gap-size));
+    font-size: calc(1.1 * var(--input-font-size));
 }
 
 .input_large {
-    padding: calc(1.4 * var(--input-ver-gap-size)) calc(1.4 * var(--input-hor-gap-size));
-    font-size: calc(1.1 * var(--input-font-size));
-    min-width: 450px;
+    padding: calc(1.2 * var(--input-ver-gap-size)) calc(1.2 * var(--input-hor-gap-size));
+    font-size: calc(1.3 * var(--input-font-size));
 }
 
 .input_text {
@@ -82,15 +84,9 @@
 
 @media screen and (max-width: 576px) {
     .input {
-        --input-font-size: 12px;
+        --input-font-size: 14px;
         --input-ver-gap-size: 6px;
         --input-hor-gap-size: 8px;
-    }
-
-    .input_medium {
-        max-width: 300px;
-        min-width: 200px;
-        width: calc(100vw - 100px);
     }
 }
 

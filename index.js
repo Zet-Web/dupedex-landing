@@ -9,7 +9,7 @@ const dialogMessage = document.querySelector(".dialog__message_wrapper")
 const messageCaption = dialogMessage.querySelector(".dialog__caption")
 const messageText = dialogMessage.querySelector(".dialog__text")
 
-const closeBtn = dialogMessage.querySelector(".close_modal")
+const closeBtn = dialogMessage.querySelector("#close_modal")
 
 const emailInput = document.querySelector('#email_input')
 const errorMessage = document.querySelector('.main__text_error')
@@ -63,7 +63,7 @@ const errorMessage = document.querySelector('.main__text_error')
     // }
 
 const validateEmail = (email) => {
-    const emailRegExp = /[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.(aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/i;
+    const emailRegExp = /[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.([a-z.]{2,9})$/i;
     return email.match(emailRegExp)
 }
 
@@ -116,13 +116,13 @@ document.querySelector('#sent_button').addEventListener('click', (e) => {
         fetch(EmailUrl, sendOptions)
         .then(response => response.json())
         .then((result) => {
-            messageCaption.textContent = (result.http_code === 200) ? "You are subscribed now!" : 'Something goes wrong...';
-            messageText.textContent = (result.http_code === 200) ? "We will keep you in touch when app is ready" : 'Please try again';
+            messageCaption.innerHTML = (result.http_code === 200) ? "You're on the list!" : 'Something went wrong... &#9940;';
+            messageText.innerHTML = (result.http_code === 200) ? "We'll let you know when it's time to get jiggy with it &#128131" : 'Please try again later &#128257';
             document.body.classList.add("not-scrollable")
             modal.classList.add("is-active")
             dialogMessage.classList.add("is-active")
             closeBtn.focus()
         })
-    } else errorMessage.textContent = 'Please enter valid E-mail like: mymail@gmail.com'
+    } else errorMessage.textContent = 'Please enter a valid email address'
 })
 

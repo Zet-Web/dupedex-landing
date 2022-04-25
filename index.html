@@ -4,30 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dupe.dex</title>
+    <title>dupedex | Skincare reviews, debunked</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="icon" href="favico.ico" type="image/x-icon">
 </head>
 <body>
-    <h1 hidden>Dupe.dex - reviews agregator</h1>
+    <h1 hidden>dupedex - reviews agregator</h1>
 
     <header class="header">
         <div class="header__container">
             <a href="#" class="header__logo">
-                <img src="./assets/img/logo.png" alt="Dupe.dex logo">
+                <img src="./assets/img/logo.svg" alt="dupedex logo">
             </a>
-
-            <div class="header__btn_wrapper">
-                <button class="btn btn_large btn_text" >SIGN IN</button>
-                <button class="btn btn_large btn_outlined" >SIGN UP</button>
-
-                <button class="btn btn_icon btn_darkMode">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 51 52">
-                        <ellipse cx="25.5" cy="26" rx="25.5" ry="26" fill="#f4cac6"/>
-                        <path d="M12.581,21.466C5.633,21.466,0,16.489,0,10.35A11.161,11.161,0,0,1,7.463.064a.953.953,0,0,1,.96.161.7.7,0,0,1,.182.849,8.926,8.926,0,0,0-.8,3.91c0,5.284,4.865,9.583,10.846,9.583a12.582,12.582,0,0,0,4.425-.7.953.953,0,0,1,.96.161.7.7,0,0,1,.182.849C22.249,18.878,17.678,21.466,12.581,21.466Z" transform="translate(13.355 37.776) rotate(-90)"/>
-                    </svg>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -44,14 +32,16 @@
 
                 <div class="main__background_image"></div>
 
-                <p class="text main__text"><b>Coming soon &#128588</b></p>
-                <p class="text main__text">Be tne first to know when we're up and running &#127939</p>
+                <p class="text main__text"><span class="coming_soon">Coming soon &#128588</span>
+                    <br>
+                    Be the first to know when we're up and running &#127939
+                </p>
 
                 <form class="main__form">
                     <label class="main__label">
-                        <input class="input input_medium input_text" id="email_input" type="text" placeholder="Enter your E-mail"/>
+                        <input class="input input_medium input_text" id="email_input" type="text" placeholder="Enter email address"/>
                     </label>
-                    <button class="btn btn_medium btn_filled" id="sent_button" type="submit">SEND</button>
+                    <button class="btn btn_large btn_filled" id="sent_button" type="submit">SEND</button>
                 </form>
                 <p class="text main__text main__text_error"></p>
 
@@ -62,21 +52,6 @@
    
     <div class="modal">
         <div class="dialog">
-            <!-- <div class="dialog__wrapper dialog__verify_wrapper">
-                <h4 class="dialog__caption">
-                    Next step
-                </h4>
-                <p class="dialog__text">
-                    We sent a 4-digit PIN-code to your E-mail address. Please enter it to complete registration
-                </p>
-                <form class="dialog__pin-form" id='pin_form'  autocomplete="off">
-                    <input class="input input_large input_outlined dialog__input" id='pin_input' type="text">
-                    <div class="dialog__btn-wrapper">
-                        <button class="btn btn_medium btn_filled " type="submit">CONFIRM</button>
-                        <button class="btn btn_medium btn_outlined close_modal" type="reset">CANCEL</button>
-                    </div>
-                </form>
-            </div> -->
             <div class="dialog__wrapper dialog__message_wrapper">
                 <h4 id="dialog_message" class="dialog__caption">
                     **TEXT**
@@ -84,7 +59,7 @@
                 <p class="dialog__text">
                     You can close this window now
                 </p>
-                <button class="btn btn_medium btn_outlined close_modal" id="close_modal">CLOSE</button>
+                <button class="btn btn_medium btn_filled" id="close_modal">CLOSE</button>
             </div>
         </div>
     </div>

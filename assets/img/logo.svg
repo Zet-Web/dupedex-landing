@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="361" height="103" viewBox="0 0 361 103">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" x2="0.088" y2="0.192" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffe4e6"/>
+      <stop offset="1" stop-color="#ffbbc1"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2728" data-name="Group 2728" transform="translate(-47 -19)">
+    <rect id="Rectangle_73" data-name="Rectangle 73" width="58" height="63" rx="10" transform="translate(47 39)" fill="url(#linear-gradient)"/>
+    <text id="Dupe.dex" transform="translate(262 102)" fill="#292935" font-size="86" font-family="Helvetica-Bold, Helvetica" font-weight="700" letter-spacing="-0.035em"><tspan x="-145.383" y="0">Dupe</tspan><tspan y="0" fill="#ffd6d9" font-size="80" font-family="HelveticaRounded-Bold, Helvetica Rounded">.</tspan><tspan y="0" fill="#ffd6d9" font-size="40">dex</tspan></text>
+  </g>
+</svg>

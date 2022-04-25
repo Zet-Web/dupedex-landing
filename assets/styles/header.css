@@ -46,6 +46,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header__container {
+        justify-content: center;
+    }
     .header__btn_wrapper :not(:last-child) {
         margin-right: 10px;
     }
